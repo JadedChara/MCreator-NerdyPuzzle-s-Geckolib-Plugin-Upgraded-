@@ -177,7 +177,24 @@ public class AnimatedEntity extends GeneratableElement
     public int maxNumberOfMobsPerGroup;
     public List<BiomeEntry> restrictionBiomes;
     public boolean spawnInDungeons;
-
+                
+    /*
+    ========================
+    | Multipart Management |
+    ========================
+    
+    Use only for larger or complex entities. Think EnderDragon or bigger. In my case, I'm using this for a Titan, from Transformers, in order to create a functional "building" that you can move in, while they're transformed.
+    ~Nightstrike
+    */
+                //This one's just for the checkbox. If true, the entity will utilize some additional features.
+    public boolean isMulti;
+                //This one's a JSON file. A lot of math here, but it will aid with calculating where the hitboxes go, and how they move.
+    public String partMap;
+    /*
+    ========================
+    ========================
+    */
+                
     private AnimatedEntity() {
         this(null);
     }
