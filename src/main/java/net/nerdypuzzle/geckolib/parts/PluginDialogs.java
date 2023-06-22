@@ -146,6 +146,7 @@ public class PluginDialogs {
                         geckoElement.maxNumberOfMobsPerGroup = entity.maxNumberOfMobsPerGroup;
                         geckoElement.restrictionBiomes = entity.restrictionBiomes;
                         geckoElement.spawnInDungeons = entity.spawnInDungeons;
+                        geckoElement.isMulti = entity.isMulti;
                         geckoElement.finalizeModElementGeneration();
                         mcreator.getWorkspace().removeModElement(entity.getModElement());
                         dialog.setVisible(false);
