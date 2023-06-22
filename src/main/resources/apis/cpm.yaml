@@ -1,0 +1,17 @@
+---
+forge-1.19.2:
+  gradle: |
+      repositories {
+        maven {
+          name = "tom5454 maven"
+          url = "https://raw.githubusercontent.com/tom5454/maven/main"
+        }
+      }
+
+      dependencies {
+        compileOnly "com.tom5454.cpm:CustomPlayerModels-API:0.6.8"
+        runtimeOnly fg.deobf("com.tom5454.cpm:CustomPlayerModels-1.19:0.6.8a")
+      }
+  update_files:
+    - ~
+name: "CPM"
