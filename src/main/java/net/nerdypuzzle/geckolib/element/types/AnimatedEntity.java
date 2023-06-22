@@ -188,8 +188,9 @@ public class AnimatedEntity extends GeneratableElement
     */
                 //This one's just for the checkbox. If true, the entity will utilize some additional features.
     public boolean isMulti;
-                //This one's a JSON file. A lot of math here, but it will aid with calculating where the hitboxes go, and how they move.
+                //These are JSON files. A lot of math here, but it will aid with calculating where the hitboxes go, and how they move.
     public String partMap;
+    public String partAnims;
     /*
     ========================
     ========================
