@@ -64,8 +64,8 @@ import java.util.stream.Stream;
 public class AnimatedEntityGUI extends ModElementGUI<AnimatedEntity> implements GeckolibElement {
     //Multipart verifying
     private JCheckBox isMultiPart = new JCheckBox();
-    private JTextField partMap = new JTextField();
-    private JTextField partAnims = new JTextField();
+    //private JTextField partMap = new JTextField();
+    //private JTextField partAnims = new JTextField();
     //
     private ProcedureSelector onStruckByLightning;
     private ProcedureSelector whenMobFalls;
