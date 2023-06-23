@@ -36,6 +36,14 @@
 
 package ${package}.entity.utils;
 
+import net.minecraft.world.entity.Mob;
+import net.minecraftforge.entity.PartEntity;
+import net.minecraft.world.entity.EntityDimensions;
+import net.minecraft.world.entity.Pose;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.nbt.CompoundTag;
+
 public class Component<T extends Mob> extends PartEntity<T>{
   
   //A shit-ton of math will need to be done to manage angle calculations and read the untextured .geo and .anim JSONs. Not looking forward to it because it's something I had gotten rusty at. Will probably model this in NodeJS before I try it here.
