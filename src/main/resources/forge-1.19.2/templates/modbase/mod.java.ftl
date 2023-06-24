@@ -18,6 +18,12 @@ package ${package};
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import ${package}.entity.utils.CPMCompat;
+
+import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.InterModComms;
+
 @Mod("${modid}") public class ${JavaModName} {
 
 	public static final Logger LOGGER = LogManager.getLogger(${JavaModName}.class);
@@ -53,8 +59,13 @@ import org.apache.logging.log4j.Logger;
                <#if settings.getMCreatorDependencies().contains("geckolib")>
                GeckoLib.initialize();
                </#if>
+	       //plugin
+	       FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
 	}
-
+	//Handles comms for plugin
+	private void enqueueIMC(final InterModEnqueueEvent event)  {
+	InterModComms.sendTo("cpm", "api", () -> (Supplier<?>) () -> new CPMCompat());
+	}
 	private static final String PROTOCOL_VERSION = "1";
 	public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation(MODID, MODID),
 		() -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
