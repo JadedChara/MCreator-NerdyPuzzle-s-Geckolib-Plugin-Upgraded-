@@ -31,9 +31,6 @@ public class PluginModelActions extends ModelImportActions {
         return new File(GeneratorUtils.getSpecificRoot(mcreator.getWorkspace(), mcreator.getWorkspace().getGeneratorConfiguration(), "mod_assets_root"), "models/displaysettings/");
     }
 
-    public static File getMultipartMaps(Mcreator mcreator){
-        return new File(GeneratorUtils.getSpecificRoot(mcreator.getWorkspace(), mcreator.getWorkspace().getGeneratorConfiguration(), "mod_assets_root"), "partmaps/")
-    }
     private static List<File> listModelsInDir(@Nullable File dir) {
         if (dir == null) {
             return Collections.emptyList();
