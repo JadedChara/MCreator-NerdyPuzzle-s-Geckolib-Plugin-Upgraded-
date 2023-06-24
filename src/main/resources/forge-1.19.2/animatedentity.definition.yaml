@@ -1,6 +1,11 @@
 global_templates:
   - template: aentity/animation_sync_factory.java.ftl
     name: "@SRCROOT/@BASEPACKAGEPATH/init/EntityAnimationFactory.java"
+  - template: entityutils/component.java.ftl
+    name: "@SRCROOT/@BASEPACKAGEPATH/entity/utils/Component.java"
+  - template: entityutils/cpmcompat.java.ftl
+    name: "@SRCROOT/@BASEPACKAGE/init/CPMCompat.java"
+
 
 templates:
   - template: aentity/livingentity.java.ftl
